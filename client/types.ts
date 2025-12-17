@@ -34,3 +34,21 @@ export interface TerminalTheme {
   brightWhite: string;
 }
 
+// P5.js Particle System Types
+export interface ParticleConfig {
+  x: number;
+  y: number;
+  color: [number, number, number];
+  size: number;
+  velocity: {
+    x: number;
+    y: number;
+  };
+  energy: number;
+}
+
+export interface P5ManagerConfig {
+  maxParticles: number;
+  fadeSpeed: number;
+  particleSpeed: number;
+}

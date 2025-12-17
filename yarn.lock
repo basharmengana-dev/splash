@@ -5,10 +5,17 @@ __metadata:
   version: 6
   cacheKey: 8
 
-"@babel/runtime@npm:^7.21.0":
+"@babel/runtime@npm:^7.12.0, @babel/runtime@npm:^7.21.0, @babel/runtime@npm:^7.5.5":
   version: 7.28.4
   resolution: "@babel/runtime@npm:7.28.4"
   checksum: 934b0a0460f7d06637d93fcd1a44ac49adc33518d17253b5a0b55ff4cb90a45d8fe78bf034b448911dbec7aff2a90b918697559f78d21c99ff8dbadae9565b55
+  languageName: node
+  linkType: hard
+
+"@davepagurek/bezier-path@npm:^0.0.2":
+  version: 0.0.2
+  resolution: "@davepagurek/bezier-path@npm:0.0.2"
+  checksum: 2737355a02c73690d412568b583ee5ba230b62164bf383ba1647b08d41fc4e2815f1766938f97a0b329c5e7bd70f258606a280c80366658967a2f126c70d6bb9
   languageName: node
   linkType: hard
 
@@ -251,6 +258,13 @@ __metadata:
   dependencies:
     minipass: ^7.0.4
   checksum: 5d36d289960e886484362d9eb6a51d1ea28baed5f5d0140bbe62b99bac52eaf06cc01c2bc0d3575977962f84f6b2c4387b043ee632216643d4787b0999465bf2
+  languageName: node
+  linkType: hard
+
+"@japont/unicode-range@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "@japont/unicode-range@npm:1.0.0"
+  checksum: abe3a5426d1a87c6fcadc7b2627c737d7405114c1ea58392962cbfc7a3f08f702f8aac437600e8ea9abe5baae983ba9e6484f87908670502d4fe7243418ade8b
   languageName: node
   linkType: hard
 
@@ -757,6 +771,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/p5@npm:^1.7.7":
+  version: 1.7.7
+  resolution: "@types/p5@npm:1.7.7"
+  checksum: dc27864516effa756eafbac77db010493dfc0c03f1c065df51cf48d8db3725f033f19ffa7c94392d532d5675cf4f1fbcd9bdf8b24aaac5b6bbf8f7b6d7e3e849
+  languageName: node
+  linkType: hard
+
 "@types/qs@npm:*":
   version: 6.14.0
   resolution: "@types/qs@npm:6.14.0"
@@ -862,7 +883,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn-walk@npm:^8.0.0":
+"acorn-walk@npm:^8.0.0, acorn-walk@npm:^8.3.4":
   version: 8.3.4
   resolution: "acorn-walk@npm:8.3.4"
   dependencies:
@@ -871,7 +892,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"acorn@npm:^8.0.4, acorn@npm:^8.11.0":
+"acorn@npm:^8.0.4, acorn@npm:^8.11.0, acorn@npm:^8.12.1":
   version: 8.15.0
   resolution: "acorn@npm:8.15.0"
   bin:
@@ -1162,6 +1183,13 @@ __metadata:
   version: 2.0.20
   resolution: "colorette@npm:2.0.20"
   checksum: 0c016fea2b91b733eb9f4bcdb580018f52c0bc0979443dad930e5037a968237ac53d9beb98e218d2e9235834f8eebce7f8e080422d6194e957454255bde71d3d
+  languageName: node
+  linkType: hard
+
+"colorjs.io@npm:^0.5.2":
+  version: 0.5.2
+  resolution: "colorjs.io@npm:0.5.2"
+  checksum: f4ad8a0ead4e7eb74612a5fed9ae999201116b215b2eac70660c1f643e21980922741641209bdbd010723923762e8e80bd499250acf7505605309f01b76f53fa
   languageName: node
   linkType: hard
 
@@ -1612,6 +1640,48 @@ __metadata:
   languageName: node
   linkType: hard
 
+"escodegen@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "escodegen@npm:2.1.0"
+  dependencies:
+    esprima: ^4.0.1
+    estraverse: ^5.2.0
+    esutils: ^2.0.2
+    source-map: ~0.6.1
+  dependenciesMeta:
+    source-map:
+      optional: true
+  bin:
+    escodegen: bin/escodegen.js
+    esgenerate: bin/esgenerate.js
+  checksum: 096696407e161305cd05aebb95134ad176708bc5cb13d0dcc89a5fcbb959b8ed757e7f2591a5f8036f8f4952d4a724de0df14cd419e29212729fa6df5ce16bf6
+  languageName: node
+  linkType: hard
+
+"esprima@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "esprima@npm:4.0.1"
+  bin:
+    esparse: ./bin/esparse.js
+    esvalidate: ./bin/esvalidate.js
+  checksum: b45bc805a613dbea2835278c306b91aff6173c8d034223fa81498c77dcbce3b2931bf6006db816f62eacd9fd4ea975dfd85a5b7f3c6402cfd050d4ca3c13a628
+  languageName: node
+  linkType: hard
+
+"estraverse@npm:^5.2.0":
+  version: 5.3.0
+  resolution: "estraverse@npm:5.3.0"
+  checksum: 072780882dc8416ad144f8fe199628d2b3e7bbc9989d9ed43795d2c90309a2047e6bc5979d7e2322a341163d22cfad9e21f4110597fe487519697389497e4e2b
+  languageName: node
+  linkType: hard
+
+"esutils@npm:^2.0.2":
+  version: 2.0.3
+  resolution: "esutils@npm:2.0.3"
+  checksum: 22b5b08f74737379a840b8ed2036a5fb35826c709ab000683b092d9054e5c2a82c27818f12604bfc2a9a76b90b6834ef081edbc1c7ae30d1627012e067c6ec87
+  languageName: node
+  linkType: hard
+
 "etag@npm:~1.8.1":
   version: 1.8.1
   resolution: "etag@npm:1.8.1"
@@ -1711,6 +1781,13 @@ __metadata:
     picomatch:
       optional: true
   checksum: bd537daa9d3cd53887eed35efa0eab2dbb1ca408790e10e024120e7a36c6e9ae2b33710cb8381e35def01bc9c1d7eaba746f886338413e68ff6ebaee07b9a6e8
+  languageName: node
+  linkType: hard
+
+"file-saver@npm:^1.3.8":
+  version: 1.3.8
+  resolution: "file-saver@npm:1.3.8"
+  checksum: b2b7bef6b0f9eafe16526734db48f371da94773c34450bac99bf1d49f6b2c9e1294d58dd1a81f7abd9eeae717d99c91f7ae250025cd3cf460a35f497a27a8318
   languageName: node
   linkType: hard
 
@@ -1848,6 +1925,13 @@ __metadata:
   dependencies:
     resolve-pkg-maps: ^1.0.0
   checksum: b3cfa1316dd8842e038f6a3dc02ae87d9f3a227f14b79ac4b1c81bf6fc75de4dfc3355c4117612e183f5147dad49c8132841c7fdd7a4508531d820a9b90acc51
+  languageName: node
+  linkType: hard
+
+"gifenc@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "gifenc@npm:1.0.3"
+  checksum: f9666247233b83033904878199ae32ea2189bf67b617fe92244a2a4b973ae641628979280c7e1d88edc3ef69a67145f69ccbb602e12ee55f89b03c975ee71919
   languageName: node
   linkType: hard
 
@@ -2054,6 +2138,24 @@ __metadata:
   languageName: node
   linkType: hard
 
+"i18next-browser-languagedetector@npm:^4.0.1":
+  version: 4.3.1
+  resolution: "i18next-browser-languagedetector@npm:4.3.1"
+  dependencies:
+    "@babel/runtime": ^7.5.5
+  checksum: 4b1354710aaaa07c3a813769981d0b878a4e8c8037dcb7feb3998be3122c24ff5947f208e14c4be4134c408d416ffdb8d7d011ba6380ab345771622ed63dc729
+  languageName: node
+  linkType: hard
+
+"i18next@npm:^19.0.2":
+  version: 19.9.2
+  resolution: "i18next@npm:19.9.2"
+  dependencies:
+    "@babel/runtime": ^7.12.0
+  checksum: a24207707eacb28488975f8921d843bc35b86f2a48504cb82eaf620e1aacddbda8d53a4dc600543a708ba49bc45e61072a753f250e89fad2c1932259190ef81a
+  languageName: node
+  linkType: hard
+
 "iconv-lite@npm:^0.6.2":
   version: 0.6.3
   resolution: "iconv-lite@npm:0.6.3"
@@ -2224,6 +2326,13 @@ __metadata:
     picocolors: ^1.1.1
     shell-quote: ^1.8.3
   checksum: b1aa1b92ef4e720d1edd7f80affb90b2fa1cc2c41641cf80158940698c18a4b6a67e2a7cb060547712e858f0ec1a7c8c39f605e0eb299f516a6184f4e680ffc8
+  languageName: node
+  linkType: hard
+
+"libtess@npm:^1.2.2":
+  version: 1.2.2
+  resolution: "libtess@npm:1.2.2"
+  checksum: a0a4d19c2ade6a1221dc076ab6177110562368c427e1f659f1f039cca4c947ed6b66a14e4f1f4f3cd599ecc7ee7ab09db6267dcd49ceccf17d0534f521f1f9c6
   languageName: node
   linkType: hard
 
@@ -2584,6 +2693,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"omggif@npm:^1.0.10":
+  version: 1.0.10
+  resolution: "omggif@npm:1.0.10"
+  checksum: 15102e46b6fa0fba32d7e948f702623cdc3cdcdfd64b2d33c6e29a61f366ffd0f250da55d66f5217dce5b93ba9c67763fa998652791a5c7f2201a3bde2c4db45
+  languageName: node
+  linkType: hard
+
 "on-finished@npm:^2.4.1, on-finished@npm:~2.4.1":
   version: 2.4.1
   resolution: "on-finished@npm:2.4.1"
@@ -2639,6 +2755,36 @@ __metadata:
   languageName: node
   linkType: hard
 
+"p5@npm:^2.1.2":
+  version: 2.1.2
+  resolution: "p5@npm:2.1.2"
+  dependencies:
+    "@davepagurek/bezier-path": ^0.0.2
+    "@japont/unicode-range": ^1.0.0
+    acorn: ^8.12.1
+    acorn-walk: ^8.3.4
+    colorjs.io: ^0.5.2
+    escodegen: ^2.1.0
+    file-saver: ^1.3.8
+    gifenc: ^1.0.3
+    i18next: ^19.0.2
+    i18next-browser-languagedetector: ^4.0.1
+    libtess: ^1.2.2
+    omggif: ^1.0.10
+    pako: ^2.1.0
+    pixelmatch: ^7.1.0
+    zod: ^3.25.51
+  checksum: 01d193a157f2696803398b5ae04d3022fd8460a12c7cb34057d3bbf0ec8a5d2e7eadfafa11f8fa7612a150f10e770b257b2d1aee02538bc60da1d2f339048deb
+  languageName: node
+  linkType: hard
+
+"pako@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "pako@npm:2.1.0"
+  checksum: 71666548644c9a4d056bcaba849ca6fd7242c6cf1af0646d3346f3079a1c7f4a66ffec6f7369ee0dc88f61926c10d6ab05da3e1fca44b83551839e89edd75a3e
+  languageName: node
+  linkType: hard
+
 "parseurl@npm:~1.3.2, parseurl@npm:~1.3.3":
   version: 1.3.3
   resolution: "parseurl@npm:1.3.3"
@@ -2681,6 +2827,24 @@ __metadata:
   version: 4.0.3
   resolution: "picomatch@npm:4.0.3"
   checksum: 6817fb74eb745a71445debe1029768de55fd59a42b75606f478ee1d0dc1aa6e78b711d041a7c9d5550e042642029b7f373dc1a43b224c4b7f12d23436735dba0
+  languageName: node
+  linkType: hard
+
+"pixelmatch@npm:^7.1.0":
+  version: 7.1.0
+  resolution: "pixelmatch@npm:7.1.0"
+  dependencies:
+    pngjs: ^7.0.0
+  bin:
+    pixelmatch: bin/pixelmatch
+  checksum: 0ad2e863e0e87ae52289c4366860a4040712a30a1e19c606745b9750b3ecda6f587dc959ce452818c50c7753ef6916f23026c14ef4d5f6c3b13c8205d61b923d
+  languageName: node
+  linkType: hard
+
+"pngjs@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "pngjs@npm:7.0.0"
+  checksum: b19a018930d27de26229c1b3ff250b3a25d09caa22cbb0b0459987d91eb0a560a18ab5d67da45a38ed7514140f26d1db58de83c31159ec101f2bb270a3c707f1
   languageName: node
   linkType: hard
 
@@ -3112,6 +3276,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"source-map@npm:~0.6.1":
+  version: 0.6.1
+  resolution: "source-map@npm:0.6.1"
+  checksum: 59ce8640cf3f3124f64ac289012c2b8bd377c238e316fb323ea22fbfe83da07d81e000071d7242cad7a23cd91c7de98e4df8830ec3f133cb6133a5f6e9f67bc2
+  languageName: node
+  linkType: hard
+
 "spawn-command@npm:0.0.2":
   version: 0.0.2
   resolution: "spawn-command@npm:0.0.2"
@@ -3154,9 +3325,11 @@ __metadata:
     "@rspack/core": ^1.1.7
     "@types/express": ^4.17.21
     "@types/node": ^20.11.5
+    "@types/p5": ^1.7.7
     concurrently: ^8.2.2
     express: ^4.18.2
     node-pty: ^1.0.0
+    p5: ^2.1.2
     socket.io: ^4.6.1
     socket.io-client: ^4.6.1
     tsx: ^4.7.0
@@ -3709,5 +3882,12 @@ __metadata:
     y18n: ^5.0.5
     yargs-parser: ^21.1.1
   checksum: 73b572e863aa4a8cbef323dd911d79d193b772defd5a51aab0aca2d446655216f5002c42c5306033968193bdbf892a7a4c110b0d77954a7fdf563e653967b56a
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.25.51":
+  version: 3.25.76
+  resolution: "zod@npm:3.25.76"
+  checksum: c9a403a62b329188a5f6bd24d5d935d2bba345f7ab8151d1baa1505b5da9f227fb139354b043711490c798e91f3df75991395e40142e6510a4b16409f302b849
   languageName: node
   linkType: hard

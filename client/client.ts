@@ -3,9 +3,18 @@ import { Terminal } from "xterm";
 import { FitAddon } from "xterm-addon-fit";
 import { WebLinksAddon } from "xterm-addon-web-links";
 import { ResizeData, ExitData, TerminalTheme } from "./types";
+import { P5Manager } from "./p5Manager";
+import { ParticleVisualization } from "./visualizations/ParticleVisualization";
 
 // Initialize Socket.io connection
 const socket: Socket = io();
+
+// Initialize P5.js manager for generative art
+const p5Manager = new P5Manager();
+
+// Create and set particle visualization
+const particleViz = new ParticleVisualization();
+p5Manager.setVisualization(particleViz);
 
 // Define terminal theme
 const terminalTheme: TerminalTheme = {
@@ -59,6 +68,12 @@ if (terminalContainer) {
 
 // Fit terminal to container
 fitAddon.fit();
+
+// Initialize P5.js canvas for generative art
+// Wait a bit for DOM to be ready
+setTimeout(() => {
+  p5Manager.init("p5-canvas");
+}, 100);
 
 // Get status indicators
 const statusIndicator = document.getElementById("status-indicator");
@@ -116,6 +131,15 @@ socket.on("connect_error", (error: Error) => {
 // Handle terminal output from server
 socket.on("output", (data: string) => {
   term.write(data);
+
+  // Pass text directly to visualization
+  // Filter out ANSI escape sequences
+  const cleanData = data.replace(/\x1b\[[0-9;]*m/g, "");
+
+  // Only generate visuals for substantial output (more than whitespace)
+  if (cleanData.trim().length > 0) {
+    p5Manager.onTextOutput(cleanData);
+  }
 });
 
 // Handle terminal exit
@@ -128,6 +152,9 @@ socket.on("exit", ({ exitCode, signal }: ExitData) => {
 // Send terminal input to server
 term.onData((data: string) => {
   socket.emit("input", data);
+
+  // Generate particles for user input too!
+  p5Manager.onTextOutput(data);
 });
 
 // Handle terminal resize
