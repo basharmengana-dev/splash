@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Splash - Web Terminal</title>
+  <link rel="stylesheet" href="xterm.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="app">
+    <header>
+      <div class="header-content">
+        <h1>🌊 Splash Terminal</h1>
+        <div class="status">
+          <span id="status-indicator" class="status-dot disconnected"></span>
+          <span id="status-text">Connecting...</span>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      <div id="terminal-container"></div>
+    </main>
+
+    <footer>
+      <div class="footer-content">
+        <span>Press <kbd>Ctrl+C</kbd> to interrupt • <kbd>Ctrl+D</kbd> to exit</span>
+        <span id="dimensions"></span>
+      </div>
+    </footer>
+  </div>
+
+  <!-- Socket.io client (served by server) -->
+  <script src="/socket.io/socket.io.js"></script>
+  <!-- Bundled application (includes xterm.js and all dependencies) -->
+  <script src="bundle.js"></script>
+</body>
+</html>
+
